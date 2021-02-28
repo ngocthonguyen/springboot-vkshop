@@ -1,0 +1,54 @@
+{
+  "name": "Order",
+  "fields": [
+    {
+      "fieldName": "idCustomer",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "idProduct",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "quantity",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "price",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "createdat",
+      "fieldType": "Instant"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "product",
+      "otherEntityRelationshipName": "order",
+      "relationshipName": "idProduct",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "customer",
+      "otherEntityRelationshipName": "order",
+      "relationshipName": "idCustomer",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210228205252",
+  "javadoc": "not an ignored comment",
+  "entityTableName": "order",
+  "dto": "no",
+  "pagination": "infinite-scroll",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "vkshop",
+  "applications": "*",
+  "microserviceName": "vkshop"
+}

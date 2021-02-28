@@ -1,0 +1,54 @@
+{
+  "name": "Product",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "price",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "stock",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "idCategory",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "image",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdat",
+      "fieldType": "Instant"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "category",
+      "otherEntityRelationshipName": "product",
+      "relationshipName": "category",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210228205352",
+  "entityTableName": "product",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "vkshop",
+  "applications": "*",
+  "microserviceName": "vkshop"
+}
