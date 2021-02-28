@@ -1,0 +1,66 @@
+
+entity Category {
+	name String
+    icon String
+}
+
+entity Customer {
+  sexe Integer,
+  pseudo String,
+  firstname String,
+  lastname String,
+  description String,
+  dateBirth Date,
+  adresseFacturation String,
+  adresseLivraison String,
+  tel String,
+  email String,
+  password String
+}
+
+// an ignored comment
+/** not an ignored comment */
+entity Order {
+  idCustomer Integer,
+  idProduct Integer,
+  quantity Integer,
+  price Float,
+  createdat DateTime
+}
+
+entity Product {	
+  name String,
+  description String
+  price Float,
+  stock Integer,
+  idCategory Integer,
+  image String,
+  createdat Datetime
+}
+
+enum Language {
+    FRENCH, ENGLISH, SPANISH
+}
+
+relationship ManyToOne {
+	Product{category} to Category
+}
+
+relationship ManyToOne {
+	Order{idProduct} to Product
+	Order{idCustomer} to Customer
+}
+
+
+// Set pagination options
+paginate Order with infinite-scroll
+paginate Product with pagination
+
+// Use Data Transfer Objects (DTO)
+// dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
