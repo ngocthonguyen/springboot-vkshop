@@ -1,0 +1,62 @@
+{
+  "name": "Customer",
+  "fields": [
+    {
+      "fieldName": "sexe",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "pseudo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "firstname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dateBirth",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "adresseFacturation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "adresseLivraison",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tel",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "password",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20210228205152",
+  "entityTableName": "customer",
+  "dto": "no",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "vkshop",
+  "applications": "*",
+  "microserviceName": "vkshop"
+}
