@@ -37,7 +37,10 @@
     "blueprints": [],
     "skipClient": true,
     "skipUserManagement": true,
-    "prettierJava": true
+    "prettierJava": true,
+    "herokuAppName": "vkshop",
+    "herokuDeployType": "git",
+    "herokuJavaVersion": "11"
   },
   "git-provider": "GitHub",
   "git-company": "ngocthonguyen",
